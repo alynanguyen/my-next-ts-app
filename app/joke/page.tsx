@@ -18,7 +18,7 @@ export default function JokePage() {
       if (!res.ok) throw new Error('Failed to fetch')
       const data: Joke = await res.json()
       setJoke(data)
-    } catch (e) {
+    } catch (_e) {
       setJoke(null)
       alert('Could not load joke.')
     } finally {
