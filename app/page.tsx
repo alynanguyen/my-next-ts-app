@@ -33,7 +33,7 @@ export default function Home() {
       // Calculate previous operation and update display
       const parts = display.split(' ');
       const secondOperand = parseFloat(parts[2]);
-      if (!isNaN(secondOperand)) {
+      if (operator!== null && !isNaN(secondOperand)) {
         const result = calculate(firstOperand, secondOperand, operator);
         setDisplay(result + ' ' + op + ' ');
         setFirstOperand(result);
